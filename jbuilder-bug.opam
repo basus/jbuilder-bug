@@ -1,0 +1,12 @@
+opam-version: "1.2"
+available: [ ocaml-version >= "4.04.0" ]
+version: "0.1"
+maintainer: "basus@cs.cornell.edu"
+authors: ["Shrutarshi Basu"]
+build: [
+  ["jbuilder" "build" "--only" "main" "--root" "." "-j" jobs "@install"]
+]
+depends: [
+  "ocamlfind" {build}
+  "jbuilder"  {build}
+  "core"      {>= "0.9.0"} ]
